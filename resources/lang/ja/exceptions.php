@@ -1,59 +1,59 @@
 <?php
 
 return [
-    'daemon_connection_failed' => 'There was an exception while attempting to communicate with the daemon resulting in a HTTP/:code response code. This exception has been logged.',
+    'daemon_connection_failed' => 'デーモンとの通信を試みている間に例外が発生し、HTTP/:code レスポンスコードになりました。この例外はログに記録されています。',
     'node' => [
-        'servers_attached' => 'A node must have no servers linked to it in order to be deleted.',
-        'daemon_off_config_updated' => 'The daemon configuration <strong>has been updated</strong>, however there was an error encountered while attempting to automatically update the configuration file on the Daemon. You will need to manually update the configuration file (config.yml) for the daemon to apply these changes.',
+        'servers_attached' => 'Nodeを削除するには、そのNodeにリンクしているサーバーがない必要があります。',
+        'daemon_off_config_updated' => 'デーモンの設定が<strong>更新</strong>されましたが、デーモンの設定ファイルを自動的に更新しようとした際にエラーが発生しました。この変更を適用するには、デーモンの設定ファイル（config.yml）を手動で更新する必要があります。',
     ],
     'allocations' => [
-        'server_using' => 'A server is currently assigned to this allocation. An allocation can only be deleted if no server is currently assigned.',
-        'too_many_ports' => 'Adding more than 1000 ports in a single range at once is not supported.',
-        'invalid_mapping' => 'The mapping provided for :port was invalid and could not be processed.',
-        'cidr_out_of_range' => 'CIDR notation only allows masks between /25 and /32.',
-        'port_out_of_range' => 'Ports in an allocation must be greater than 1024 and less than or equal to 65535.',
+        'server_using' => 'このアロケーションには現在サーバーが割り当てられています。アロケーションを削除できるのは、現在サーバーが割り当てられていない場合のみです。',
+        'too_many_ports' => '1つの範囲に1000個以上のポートを一度に追加することは対応していません。',
+        'invalid_mapping' => ':portに指定されたマッピングが無効で、処理できませんでした。',
+        'cidr_out_of_range' => 'CIDR記法では、/25～/32の間のマスクしか使用できません。',
+        'port_out_of_range' => 'アロケーションのポートは、1024以上、65535以下でなければなりません。',
     ],
     'nest' => [
-        'delete_has_servers' => 'A Nest with active servers attached to it cannot be deleted from the Panel.',
+        'delete_has_servers' => 'アクティブなサーバが接続されているネストは、パネルから削除できません。',
         'egg' => [
-            'delete_has_servers' => 'An Egg with active servers attached to it cannot be deleted from the Panel.',
-            'invalid_copy_id' => 'The Egg selected for copying a script from either does not exist, or is copying a script itself.',
-            'must_be_child' => 'The "Copy Settings From" directive for this Egg must be a child option for the selected Nest.',
-            'has_children' => 'This Egg is a parent to one or more other Eggs. Please delete those Eggs before deleting this Egg.',
+            'delete_has_servers' => 'アクティブなサーバが接続されているEggは、パネルから削除できません。',
+            'invalid_copy_id' => 'スクリプトをコピーするために選択されたEggが存在しないか、スクリプト自体をコピーしています。',
+            'must_be_child' => 'このEggの「設定のコピー元」ディレクティブは、選択されたネストの子オプションでなければなりません',
+            'has_children' => 'このEggは1つ以上の他のEggの親です。このEggを削除する前にそれらのEggを削除してください。',
         ],
         'variables' => [
-            'env_not_unique' => 'The environment variable :name must be unique to this Egg.',
-            'reserved_name' => 'The environment variable :name is protected and cannot be assigned to a variable.',
-            'bad_validation_rule' => 'The validation rule ":rule" is not a valid rule for this application.',
+            'env_not_unique' => '環境変数:nameは、このEggに固有のものでなければなりません。',
+            'reserved_name' => '環境変数:nameは保護されているため、変数に割り当てることはできません。',
+            'bad_validation_rule' => '検証ルール「:rule」は、このアプリケーションでは有効なルールではありません。',
         ],
         'importer' => [
-            'json_error' => 'There was an error while attempting to parse the JSON file: :error.',
-            'file_error' => 'The JSON file provided was not valid.',
-            'invalid_json_provided' => 'The JSON file provided is not in a format that can be recognized.',
+            'json_error' => 'JSONファイルを解析しようとしたときにエラーが発生しました: :error.',
+            'file_error' => '提供されたJSONファイルは有効ではありませんでした。',
+            'invalid_json_provided' => '提供されたJSONファイルは、認識できる形式ではありません。',
         ],
     ],
     'subusers' => [
-        'editing_self' => 'Editing your own subuser account is not permitted.',
-        'user_is_owner' => 'You cannot add the server owner as a subuser for this server.',
-        'subuser_exists' => 'A user with that email address is already assigned as a subuser for this server.',
+        'editing_self' => '自分のサブユーザーアカウントの編集は許可されていません。',
+        'user_is_owner' => 'サーバーのオーナーをこのサーバーのサブユーザーとして追加することはできません。',
+        'subuser_exists' => 'そのメールアドレスを持つユーザーは、このサーバーのサブユーザーとしてすでに割り当てられています。',
     ],
     'databases' => [
-        'delete_has_databases' => 'Cannot delete a database host server that has active databases linked to it.',
+        'delete_has_databases' => 'アクティブなデータベースがリンクされているデータベースホストサーバーは削除できません。',
     ],
     'tasks' => [
-        'chain_interval_too_long' => 'The maximum interval time for a chained task is 15 minutes.',
+        'chain_interval_too_long' => '連鎖したタスクの最大インターバル時間は15分です。',
     ],
     'locations' => [
-        'has_nodes' => 'Cannot delete a location that has active nodes attached to it.',
+        'has_nodes' => 'アクティブなNodeが接続されているロケーションは削除できません。',
     ],
     'users' => [
-        'node_revocation_failed' => 'Failed to revoke keys on <a href=":link">Node #:node</a>. :error',
+        'node_revocation_failed' => '<a href=":link">Node #:node</a>のキーの取り消しに失敗しました。:error',
     ],
     'deployment' => [
-        'no_viable_nodes' => 'No nodes satisfying the requirements specified for automatic deployment could be found.',
-        'no_viable_allocations' => 'No allocations satisfying the requirements for automatic deployment were found.',
+        'no_viable_nodes' => '自動デプロイに指定された要件を満たすNodeが見つかりませんでした。',
+        'no_viable_allocations' => '自動デプロイメントに指定された要件を満たすアロケーションが見つかりませんでした。',
     ],
     'api' => [
-        'resource_not_found' => 'The requested resource does not exist on this server.',
+        'resource_not_found' => '要求されたリソースはこのサーバー上に存在しません。',
     ],
 ];
